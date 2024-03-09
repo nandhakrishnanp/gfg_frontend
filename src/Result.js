@@ -2,15 +2,23 @@ import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
 const Result = ({ data }) => {
   const [isloading, setIsloading] = useState(true);
+  const [err,seterr] =useState(false)
   useEffect(() => {
     if (data !== "") {
       setIsloading(false);
     }
+    
+    if(data.err==500){
+      seterr(true)
+      
+    }
+
   }, [data]);
   return (
     <div>
       <div className="container">
         <div className="wrapper">
+          {err ? <h3 className="text-center text-danger pop ">Not found your account</h3> :null}
           {isloading ? (
             <div class="spinner-border text-success" role="status">
               <span class="visually-hidden">Loading...</span>
