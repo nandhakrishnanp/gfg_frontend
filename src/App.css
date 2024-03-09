@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container img {
+  width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-image: linear-gradient(
+    to right top,
+    #00fd4d,
+    #00e649,
+    #00cf44,
+    #00b93f,
+    #00a339,
+    #20a342,
+    #30a44b,
+    #3da453,
+    #5aba6d,
+    #75d187,
+    #8fe8a1,
+    #aaffbc
+  );
+}
+
+.wrapper {
+  background-color: #edfaf0;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.pop {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.rob {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.input_box {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid green;
+  margin: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.input_box ::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.btn-success {
+  background-color: #057a2c;
+  border-radius: 10px;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #050505;
+}
+
+.name {
+  color: #078a07;
+  text-transform: uppercase;
+}
+
+
+.problem h4{
+     color: #00a339;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  
 }

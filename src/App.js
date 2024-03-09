@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import axios from "axios";
+import { Routes,Route,Link } from "react-router-dom";
+import  icon from "./GeeksforGeeks.svg.png"
+import { useState } from "react";
+import Result from "./Result";
+import Home from "./Home";
 function App() {
+    const [url , setUrl] = useState("")
+    const [err,setErr] = useState("")
+    const[data,setdata] =useState("")
+  const sendInputToApi = async () => {
+   setdata("")
+   if(url!=""){
+      const BaseUrl = "https://worthofgeeks.onrender.com/";
+      try{
+         const res = await axios.post(BaseUrl, { url: url });
+      const Data = res.data;
+      console.log(Data);
+      setdata(Data)
+      setUrl("")
+      }
+      catch(err){
+         console.log(err);
+      }
+      
+   } 
+   else{
+        setErr("No Url")
+   }
+    
+  };
+
+   
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Routes>
+         <Route path="/Result" element={<Result data = {data} setdata={setdata}/>}/>
+         <Route path="/" element={<Home icon={icon}  sendInputToApi={sendInputToApi}  url={url} setUrl={setUrl}   />}/>
+       </Routes>
+     
     </div>
   );
 }
