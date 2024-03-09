@@ -10,21 +10,8 @@
 }
 
 body {
-  background-image: linear-gradient(
-    to right top,
-    #00fd4d,
-    #00e649,
-    #00cf44,
-    #00b93f,
-    #00a339,
-    #20a342,
-    #30a44b,
-    #3da453,
-    #5aba6d,
-    #75d187,
-    #8fe8a1,
-    #aaffbc
-  );
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fgreen-background-pattern&psig=AOvVaw157csov6Ylp9hEa1V2FMtl&ust=1710081818331000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNjY_q2154QDFQAAAAAdAAAAABAE') 
+  
 }
 
 .wrapper {
